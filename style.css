@@ -1,0 +1,249 @@
+@import url('https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,100..900;1,100..900&display=swap');
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: "Epilogue", sans-serif;
+}
+body {
+    min-height: 100vh;
+}
+
+/* layout guide */
+
+.layout-guide {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none;
+    z-index: 9999;
+}
+  
+.layout-guide .container {
+    display: flex;
+    gap: 20px;
+    max-width: calc(100% - 180px);
+    margin: 0 auto;
+    height: 100%;
+    padding-left: 0;
+    padding-right: 0;
+}
+  
+.layout-guide .col {
+    flex: 1;
+    background-color: rgba(116, 116, 116, 0.1);
+    outline: 1px solid rgba(85, 85, 85, 0.3);
+}
+.layout-guide .container {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+section {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    scroll-snap-align: start;
+}
+main {
+    scroll-snap-type: y mandatory;
+    overflow-y: auto;
+    height: 100vh;
+}
+.homepage {
+    background: #fafafa;
+    padding: 0;
+    position: relative;
+}
+.homepage-center-title {
+    position: absolute;
+    top: 57.5%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 3.5rem;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    margin: 0;
+    text-align: center;
+    z-index: 10;
+}
+h1, h2 {
+    margin: 0.5em 0;
+}
+.project-list {
+    width: 100%;
+}
+.homepage-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+.grid-item {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    font-size: 0.8rem;
+    font-weight: 500;
+    padding: 1rem;
+    text-align: left;
+}
+.homepage-header {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    width: 100%;
+    max-width: 100vw;
+    box-sizing: border-box;
+    padding: 0.5rem 1.5rem;
+    gap: 0.5rem;
+    align-items: start;
+    overflow-x: auto;
+}
+.header-item {
+    width: 100%;
+    font-size: 1.05rem;
+    font-weight: 500;
+    text-align: left;
+    line-height: 1.3;
+    letter-spacing: 0.01em;
+    padding: 0.25rem;
+    margin: 0;
+    box-sizing: border-box;
+    min-width: 0;
+    word-break: break-word;
+}
+.header-item h2{
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: 0.01em;
+    text-transform: uppercase;
+    color: rgba(42, 42, 42, 1);
+}
+.header-item-sub {
+    font-size: 0.9rem;
+    font-weight: 300;
+    color: rgba(42, 42, 42, 0.8);
+    margin-top: 2em;
+    line-height: 1.4;
+}
+.header-item.nowrap, .header-item h2.nowrap {
+    white-space: nowrap;
+}
+.header-item.right, .header-item h2.right {
+    text-align: right !important;
+    justify-content: flex-end;
+}
+.spacer {
+    width: 100%;
+    height: 1px;
+}
+
+.project {
+    border-bottom: 1px solid #c7d2fe;
+}
+.contact {
+    background: #fef9c3;
+}
+
+@media (max-width: 900px) {
+    .homepage-header {
+        padding: 0.5rem 0.25rem;
+        gap: 0.25rem;
+        overflow-x: auto;
+    }
+    .header-item,
+    .header-item.nowrap {
+        margin-left: 0 !important;
+        text-align: left !important;
+        justify-content: flex-start;
+    }
+    .header-item.right {
+        text-align: right !important;
+        justify-content: flex-end;
+    }
+    .spacer {
+        display: none;
+    }
+}
+
+.about-me-grid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 1.25rem;
+    width: 100vw;
+    max-width: 100vw;
+    box-sizing: border-box;
+    padding: 1.75rem;
+    align-items: start;
+    background: #fafafa;
+}
+.about-me-left {
+    grid-column: 1 / 2;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 0.5rem;
+}
+.about-me-section-title {
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: 0.01em;
+    margin-bottom: 0.2em;
+    text-transform: none;
+}
+.about-me-section-title span {
+    font-weight: 600;
+    margin-left: 0.5em;
+}
+.about-me-right {
+    grid-column: 7 / 12;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 0.5rem;
+}
+.about-me-title {
+    font-size: 3rem;
+    font-weight: 600;
+    width: 100%;
+    max-width: 100vw;
+    letter-spacing: 0.01em;
+    text-transform: uppercase;
+}
+.about-me-paragraph {
+    grid-column: 7 / 13;
+    width: 100%;
+    font-size: 1rem;
+    font-weight: 300;
+    margin-bottom: 1.2em;
+    line-height: 1.5;
+    color: #111;
+    max-width: 100vw;
+}
+@media (max-width: 900px) {
+    .about-me-grid {
+        grid-template-columns: 1fr;
+        padding: 1.2rem 0.5rem 0 0.5rem;
+        min-height: unset;
+    }
+    .about-me-left, .about-me-right {
+        grid-column: 1 / 2 !important;
+        margin-top: 0.5rem;
+        align-items: flex-start;
+    }
+    .about-me-year {
+        align-self: flex-start;
+        text-align: left;
+    }
+    .about-me-title {
+        font-size: 1.4rem;
+    }
+    .about-me-paragraph {
+        font-size: 1rem;
+        max-width: 100%;
+    }
+}
