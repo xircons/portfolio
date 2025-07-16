@@ -1,13 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sample Portfolio</title>
+    <title>—</title>
+    <link rel="icon" type="image/x-icon" href="img/logo.png">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
 </head>
 <body>
-    <div class="layout-guide" style="display: block;">
+    <div class="layout-guide" style="display: none;">
         <div class="container" style="max-width: calc(100% - 60px);">
           <div class="col"></div><div class="col"></div><div class="col"></div>
           <div class="col"></div><div class="col"></div><div class="col"></div>
@@ -19,14 +22,26 @@
         <section class="homepage">
             <div class="homepage-header">
                 <div class="header-item portfolio nowrap" style="grid-column: 1 / 2;"><h2>PORTFOLIO</h2></div>
-                <div class="header-item designed-by" style="grid-column: 5 / 8;">
-                    <h2>DESIGNED BY<br>WUTTIKAN SUKSAN</h2>
-                    <div class="header-item-sub">LCLA Office is an architecture and landscape design studio founded by Luis Callejas and Charlotte Hansson, with offices in Oslo and Medellín.</div>
+                <div class="header-item designed-by" style="grid-column: 6 / 8;">
+                    <h2>XIRCONS <br> ‎</h2>
+                    <div class="header-item-sub">
+                            You can explore <br>
+                            my projects and experiments <br>
+                            on GitHub, where I share <br>
+                            additional works that reflect <br>
+                            my growth, creativity, <br>
+                            and technical skills <br>
+                            <a href="https://github.com/xircons" target="_blank">(github.com/xircons)</a>
+                    </div>
                 </div>
                 <div class="spacer" style="grid-column: 8 / 9;"></div>
                 <div class="header-item passionate" style="grid-column: 9 / 12;">
-                    <h2>PASSIONATE</h2>
-                    <div class="header-item-sub">LCLA Office is an architecture and landscape design studio founded by Luis Callejas and Charlotte Hansson, with offices in Oslo and Medellín.</div>
+                    <h2>DESIGNED BY<br>WUTTIKAN SUKSAN</h2>
+                    <div class="header-item-sub">
+                        Portfolio was designed and developed by me, Wuttikan Suksan,
+                        to introduce myself and showcase my journey in web design and development.
+                        It reflects my creativity, skills, and dedication to crafting meaningful digital experiences.
+                    </div>
                 </div>
                 <div class="header-item right year nowrap" style="grid-column: 12 / 13;">
                     <h2>2025</h2>
@@ -34,38 +49,63 @@
             </div>
             <h1 class="homepage-center-title">WUTTIKAN SUKSAN</h1>
         </section>
+        
         <section class="about-me">
             <div class="about-me-grid">
-                <div class="about-me-left" style="grid-column: 1 / 7;">
-                    <div class="about-me-section-title">1 <span>ABOUT ME</span></div>
+                <div class="about-me-left" style="grid-column: 1 / 4;">
+                    <div class="about-me-section-title">1 <span>Introduction</span></div>
                 </div>
-                <div class="about-me-right" style="grid-column: 7 / 13;">
-                    <h2 class="about-me-title">ABOUT ME</h2>
+                <i class="about-me-arrow bi bi-arrow-right" style="grid-column: 4;"></i>
+                <div class="about-me-right" style="grid-column: 7 / 12;">
                     <p class="about-me-paragraph">
                         Hello, my name is Wuttikan. I’m currently a student in the Digital Industry Integration program at Chiang Mai University.
-I am passionate about web design and development, dedicated to creating work that is clean, original, and visually engaging, with a strong focus on delivering an intuitive and seamless user experience. On the backend, I am comfortable working with databases, RESTful APIs, and Node.js to build efficient and robust systems.
+                        I am passionate about web design and development, dedicated to creating work that is clean, original, and visually engaging, with a strong focus on delivering an intuitive and seamless user experience. On the backend, I am comfortable working with databases, RESTful APIs, and Node.js to build efficient and robust systems.
                     </p>
                     <p class="about-me-paragraph">
                         I continuously hone my skills through academic projects and independent work. You can explore my projects on GitHub, where I demonstrate my approach to design, development, and full-cycle problem-solving. These projects reflect my dedication to growth and excellence in the technology field.
                     </p>
                 </div>
             </div>
+            <div class="about-me-image-wrapper">
+                <img class="about-me-image" src="img/mockup/login_mockup.png" alt="About Me Image" />
+            </div>
         </section>
-        <section class="contact">
-            <h2>Contact Me</h2>
-            <p>Email: your.email@example.com</p>
-            <p>LinkedIn: linkedin.com/in/yourprofile</p>
+        <section class="project">
+            <div class="project-grid">
+                <div class="project-left" style="grid-column: 1 / 4;">
+                    <div class="project-section-title">2 <span>Projects</span></div>
+                </div>
+                <i class="project-arrow bi bi-arrow-right" style="grid-column: 4;"></i>
+                <div class="project-right" style="grid-column: 7 / 12;">
+                    <p class="project-paragraph">
+                        From 2023 to 2025, <br>
+                        I focused on creating and refining <br> a variety of projects <br>
+                        across design and development. <br>
+                        Some were complete works,<br> others small studies— <br>
+                        all part of a continuous process of learning, testing, and building.
+                    </p>
+                </div>
+                <div class="project-listing" style="grid-column: 1 / 13;">01&nbsp;&nbsp;store.atelien</div>
+                <div class="project-images" style="grid-column: 1 / 13;">
+                    <img class="project-img image-left" src="img/mockup/store.atelien/index.jpg" alt="store.atelien project image" />
+                    <img class="project-img image-right" src="img/mockup/store.atelien/table_product.jpg" alt="table_product" />
+                    <img class="project-img image-right" src="img/mockup/store.atelien/product.jpg" alt="product" />
+                    <img class="project-img image-right" src="img/mockup/store.atelien/cart.jpg" alt="cart" />
+                    <img class="project-img image-right" src="img/mockup/store.atelien/admin_menu.jpg" alt="admin_menu" />
+                </div>
+            </div>
+            <div class="project-divider"></div>
         </section>
     </main>
     <script>
-      const platform = navigator.platform.toUpperCase();
-      if (platform.indexOf('MAC') >= 0) {
-        document.body.classList.add('os-mac');
-      } else if (platform.indexOf('WIN') >= 0) {
-        document.body.classList.add('os-win');
-      } else {
-        document.body.classList.add('os-other');
-      }
+        const platform = navigator.platform.toUpperCase();
+        if (platform.indexOf('MAC') >= 0) {
+          document.body.classList.add('os-mac');
+        } else if (platform.indexOf('WIN') >= 0) {
+          document.body.classList.add('os-win');
+        } else {
+          document.body.classList.add('os-other');
+        }
     </script>
 </body>
 </html>

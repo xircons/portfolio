@@ -80,11 +80,23 @@ body {
 }
 
 section {
+    position: relative;
     height: 100vh;
     display: flex;
     flex-direction: column;
     /* scroll-snap-align: start; */
 }
+
+/* section::after {
+    content: "";
+    position: absolute;
+    left: 2rem;
+    right: 2rem;
+    bottom: 0;
+    height: 0;
+    border-bottom: 2px solid #2a2a2a;
+    pointer-events: none;
+} */
 
 .homepage {
     background: #fff;
@@ -95,14 +107,19 @@ section {
 .homepage-center-title {
     position: absolute;
     top: 57.5%;
-    left: 50%;
+    left: 50.35%;
     transform: translate(-50%, -50%);
-    font-size: 3.5rem;
-    font-weight: 600;
+    font-size: 4.25rem;
+    font-weight: 700;
     letter-spacing: 0.05em;
     margin: 0;
     text-align: center;
     z-index: 10;
+    color: rgb(12, 12, 12)
+}
+.header-item h2 {
+    font-size: 4rem;
+    font-weight: 900;
 }
 
 h1, h2 {
@@ -145,7 +162,7 @@ h1, h2 {
 
 .header-item {
     width: 100%;
-    font-size: 1.05rem;
+    font-size: 1rem;
     font-weight: 500;
     text-align: left;
     line-height: 1.3;
@@ -155,6 +172,7 @@ h1, h2 {
     box-sizing: border-box;
     min-width: 0;
     word-break: break-word;
+    color: rgb(12, 12, 12);
 }
 
 .header-item h2 {
@@ -165,13 +183,14 @@ h1, h2 {
     color: rgba(42, 42, 42, 1);
 }
 
-.header-item-sub {
-    font-size: 0.9rem;
-    font-weight: 300;
-    color: rgba(42, 42, 42, 0.8);
-    margin-top: 2em;
+.header-item-sub, .header-item-sub a {
+    font-size: 1rem;
+    font-weight: 400;
+    color: rgba(42, 42, 42);
+    margin-top: 6em;
     line-height: 1.4;
 }
+
 
 .header-item.designed-by,
 .header-item.passionate {
@@ -192,12 +211,41 @@ h1, h2 {
     height: 1px;
 }
 
-.project {
-    border-bottom: 1px solid #c7d2fe;
+
+
+.about-me {
+    position: relative;
+    height: 145vh;
+    /* background-color: #c7d2fe; */
+    overflow: hidden;
 }
 
-.about-me{
-    background-color: aqua;
+/* .about-me::after {
+    content: "";
+    position: absolute;
+    left: 2rem;
+    right: 2rem;
+    bottom: 0;
+    height: 0;
+    border-bottom: 2px solid #2a2a2a;
+    pointer-events: none;
+    z-index: 3;
+} */
+
+.about-me-image-wrapper {
+    position: relative;
+    width: fit-content;
+    margin: 0 auto;
+    max-width: 50%;
+    z-index: 2;
+}
+
+.about-me-image {
+    position: relative;
+    z-index: 2;
+    display: block;
+    max-width: 100%;
+    height: auto;
 }
 
 .contact {
@@ -237,11 +285,12 @@ h1, h2 {
 }
 
 .about-me-left {
-    grid-column: 1 / 2;
+    grid-column: 1 / 4;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    margin-top: 0.5rem;
+    margin-top: 0;
+    height: auto;
 }
 
 .about-me-section-title {
@@ -250,10 +299,11 @@ h1, h2 {
     letter-spacing: 0.01em;
     margin-bottom: 0.2em;
     text-transform: none;
+    color: rgb(12, 12, 12);
+    text-transform: uppercase;
 }
 
 .about-me-section-title span {
-    font-weight: 600;
     margin-left: 0.5em;
     color: rgba(42, 42, 42, 1);
 }
@@ -263,29 +313,33 @@ h1, h2 {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    padding-left: 0rem;
+    padding-left: 0;
+    margin-top: 0;
+    height: auto;
 }
 
 .about-me-title {
     margin: 0;
-    font-size: 3rem;
-    font-weight: 600;
+    font-size: 3.5rem;
+    font-weight: 700;
     width: 100%;
     max-width: 100vw;
     letter-spacing: 0.01em;
     text-transform: uppercase;
-    color: rgba(42, 42, 42, 1);
+    color: rgb(12, 12, 12);
+    margin-bottom: 2em;
 }
 
 .about-me-paragraph {
     grid-column: 7 / 13;
     width: 100%;
-    font-size: 1rem;
-    font-weight: 300;
+    font-size: 1.25rem;
+    font-weight: 400;
     margin-bottom: 1.2em;
     line-height: 1.5;
-    color: rgba(42, 42, 42, 0.8);
+    color: rgba(42, 42, 42, 1);
     max-width: 100vw;
+    margin: 0 0 2rem 0;
 }
 
 @media (max-width: 900px) {
@@ -323,11 +377,201 @@ body.os-mac .about-me-right {
     padding-left: 0;
 }
 body.os-win .about-me-right {
-    padding-left: 0rem;
+    padding-left: 0.25rem;
 }
 body.os-mac .about-me-grid {
     padding: 1.75rem;
 }
 body.os-win .about-me-grid {
+    padding: 2rem;
+}
+
+.about-me-arrow {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #2a2a2a;
+    grid-column: 4;
+    margin-top: 0;
+    height: auto;
+}
+
+/* Project Section Styles */
+.project {
+    position: relative;
+    overflow: visible;
+}
+
+/* .project::after {
+    content: "";
+    position: absolute;
+    left: 2rem;
+    right: 2rem;
+    bottom: 0;
+    height: 0;
+    border-bottom: 2px solid #2a2a2a;
+    pointer-events: none;
+    z-index: 3;
+} */
+
+.project-divider {
+    grid-column: 1 / 13;
+    /* border-top: 1px solid #222;
+    border-bottom: 1px solid #222; */
+    margin: 0 1.35rem 0 2.1rem ;
+}
+
+.project-listing {
+    grid-column: 1 / 13;
+    font-size: 1.1rem;
+    font-weight: 400;
+    padding: 1rem 0 1rem 0;
+    letter-spacing: 0.01em;
+    color: #111;
+    display: flex;
+    align-items: center;
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 1.25rem;
+    width: 100%;
+    max-width: 100vw;
+    box-sizing: border-box;
     padding: 1.75rem;
+    align-items: start;
+    height: auto;
+    min-height: 0;
+}
+
+.project-left {
+    grid-column: 1 / 4;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 0;
+    height: auto;
+}
+
+.project-section-title {
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: 0.01em;
+    margin-bottom: 0.2em;
+    text-transform: none;
+    color: rgb(12, 12, 12);
+    text-transform: uppercase;
+}
+
+.project-section-title span {
+    margin-left: 0.5em;
+    color: rgba(42, 42, 42, 1);
+}
+
+.project-right {
+    grid-column: 7 / 12;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 0;
+    margin-top: 0;
+    height: auto;
+}
+
+.project-paragraph {
+    grid-column: 7 / 13;
+    width: 100%;
+    font-size: 3rem;
+    font-weight: 500;
+    margin-bottom: 1.2em;
+    color: rgb(12, 12, 12);
+    max-width: 100vw;
+    margin: 0 0 2rem 0;
+    line-height: 1.12;    
+}
+
+.project-arrow {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #2a2a2a;
+    grid-column: 4;
+    margin-top: 0;
+    height: auto;
+}
+
+.project-images {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 0;
+    width: 100%;
+    grid-column: 1 / 13;
+}
+
+.project-img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+    margin: 0;
+    padding: 0;
+}
+
+.image-left {
+    grid-column: 1 / 7;
+    grid-row: 1 / 5;
+}
+
+.image-right {
+    grid-column: 7 / 13;
+    margin-bottom: 1.5rem;
+}
+
+.image-right:last-child {
+    margin-bottom: 0;
+}
+
+@media (max-width: 900px) {
+    .project-img {
+        margin-left: 0.5rem;
+        grid-column: 1 / 13;
+    }
+}
+
+/* Project Responsive Styles */
+@media (max-width: 900px) {
+    .project-grid {
+        grid-template-columns: 1fr;
+        padding: 1.2rem 0.5rem 0 0.5rem;
+        min-height: unset;
+    }
+    .project-left, .project-right {
+        grid-column: 1 / 2 !important;
+        margin-top: 0.5rem;
+        align-items: flex-start;
+    }
+    .project-paragraph {
+        font-size: 1rem;
+        max-width: 100%;
+    }
+}
+
+/* Project OS-specific layout adjustments */
+body.os-mac .project-right {
+    padding-left: 0;
+}
+body.os-win .project-right {
+    padding-left: 0.25rem;
+}
+body.os-mac .project-grid {
+    padding: 1.75rem;
+}
+body.os-win .project-grid {
+    padding: 2rem;
 }
