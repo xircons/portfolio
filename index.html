@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
 </head>
 <body>
-    <div class="layout-guide" style="display: none;">
+    <div class="layout-guide" style="display: block;">
         <div class="container" style="max-width: calc(100% - 60px);">
           <div class="col"></div><div class="col"></div><div class="col"></div>
           <div class="col"></div><div class="col"></div><div class="col"></div>
@@ -85,14 +85,34 @@
                         all part of a continuous process of learning, testing, and building.
                     </p>
                 </div>
-                <div class="project-listing" style="grid-column: 1 / 13;">01&nbsp;&nbsp;store.atelien</div>
-                <div class="project-images" style="grid-column: 1 / 13;">
-                    <img class="project-img image-left" src="img/mockup/store.atelien/index.jpg" alt="store.atelien project image" />
-                    <img class="project-img image-right" src="img/mockup/store.atelien/table_product.jpg" alt="table_product" />
-                    <img class="project-img image-right" src="img/mockup/store.atelien/product.jpg" alt="product" />
-                    <img class="project-img image-right" src="img/mockup/store.atelien/cart.jpg" alt="cart" />
-                    <img class="project-img image-right" src="img/mockup/store.atelien/admin_menu.jpg" alt="admin_menu" />
+                <div class="project-listing" style="grid-column: 1 / 13; flex-direction: column; align-items: stretch;">
+                    <div class="project-listing-header" style="display: flex; align-items: center; justify-content: space-between; width: 100%;">
+                        <span>01&nbsp;&nbsp;STORE.ATELIEN</span>
+                        <i class="bi bi-plus"></i>
+                    </div>
+                    <div class="project-listing-row" style="display: grid; grid-template-columns: repeat(12, 1fr); width: 100%; margin: 0; padding: 0; align-items: center;">
+                        <div class="project-listing-text sticky-project-description" style="grid-column: 1 / 5;">
+                            <span>
+                                Atelien Store, a digital commerce platform conceived and developed by Wuttikan Suksan, stands as a quiet intervention in the landscape of online retail. distills the act of shopping into a seamless, contemplative experience. The project’s essence lies in its pursuit of clarity—each interaction pared back to its most essential form.<br><br>
+                                Central to the design is the reimagining of the storefront and admin dashboard as parallel spaces—each distinct, yet unified by a shared visual language. The interface does not merely present products; it reveals a system where navigation, management, and discovery are rendered intuitive, almost inevitable. The architecture of the site transforms complexity into calm, inviting users to move with intention.<br><br>
+                                Materials are digital, yet the structure borrows from the logic of physical space: a grid-based layout, restrained color palette, and measured typography evoke a sense of order and quiet confidence. The interface elements—subtle lines, generous white space, and Helvetica-inspired type—create an atmosphere that is both precise and welcoming.<br><br>
+                                Small gestures—hover states, micro-interactions, and succinct <br> copy—echo the project’s core vision. Each detail is considered, each transition deliberate, expressing a commitment to refinement and ease.<br><br>
+                                Atelien Store situates itself within a broader movement toward thoughtful digital environments. It is less a showcase of features, more a meditation on how design can reveal, rather than obscure, the essentials of commerce and connection.
+                            </span>
+                        </div>
+                        <div class="project-images" style="grid-column: 7 / 13; display: flex; flex-direction: column; gap: 0; margin: 0; padding: 0; height: 100%;">
+                            <img src="img/mockup/store.atelien/index.jpg" alt="index" style="margin: 0; padding: 0;" />
+                            <img src="img/mockup/store.atelien/table_product.jpg" alt="table_product" style="margin: 0; padding: 0;" />
+                            <img src="img/mockup/store.atelien/product.jpg" alt="product" style="margin: 0; padding: 0;" />
+                            <img src="img/mockup/store.atelien/cart.jpg" alt="cart" style="margin: 0; padding: 0;" />
+                            <img src="img/mockup/store.atelien/admin_menu.jpg" alt="admin_menu" style="margin: 0; padding: 0;" />
+                        </div>
+                    </div>
                 </div>
+                <div class="project-listing" style="grid-column: 1 / 13;">02&nbsp;&nbsp;store.atelien<i class="bi bi-plus"></i></div>
+                <div class="project-listing" style="grid-column: 1 / 13;">03&nbsp;&nbsp;store.atelien<i class="bi bi-plus"></i></div>
+                <div class="project-listing" style="grid-column: 1 / 13;">04&nbsp;&nbsp;store.atelien<i class="bi bi-plus"></i></div>
+                <div class="project-listing" style="grid-column: 1 / 13;">05&nbsp;&nbsp;store.atelien<i class="bi bi-plus"></i></div>
             </div>
             <div class="project-divider"></div>
         </section>
